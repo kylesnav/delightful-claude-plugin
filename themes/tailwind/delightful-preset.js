@@ -13,29 +13,35 @@ export default {
         'text-secondary': 'var(--text-secondary)',
         'text-muted': 'var(--text-muted)',
         'text-on-accent': 'var(--text-on-accent)',
-        'text-on-yellow': 'var(--text-on-yellow)',
+        'text-on-gold': 'var(--text-on-gold)',
 
         'border-default': 'var(--border-default)',
         'border-strong': 'var(--border-strong)',
         'border-subtle': 'var(--border-subtle)',
 
-        blue: {
-          DEFAULT: 'var(--accent-blue)',
-          hover: 'var(--accent-blue-hover)',
-          subtle: 'var(--accent-blue-subtle)',
-          text: 'var(--accent-blue-text)',
+        primary: {
+          DEFAULT: 'var(--accent-primary)',
+          hover: 'var(--accent-primary-hover)',
+          subtle: 'var(--accent-primary-subtle)',
+          text: 'var(--accent-primary-text)',
         },
-        red: {
-          DEFAULT: 'var(--accent-red)',
-          hover: 'var(--accent-red-hover)',
-          subtle: 'var(--accent-red-subtle)',
-          text: 'var(--accent-red-text)',
+        danger: {
+          DEFAULT: 'var(--accent-danger)',
+          hover: 'var(--accent-danger-hover)',
+          subtle: 'var(--accent-danger-subtle)',
+          text: 'var(--accent-danger-text)',
         },
-        yellow: {
-          DEFAULT: 'var(--accent-yellow)',
-          hover: 'var(--accent-yellow-hover)',
-          subtle: 'var(--accent-yellow-subtle)',
-          text: 'var(--accent-yellow-text)',
+        gold: {
+          DEFAULT: 'var(--accent-gold)',
+          hover: 'var(--accent-gold-hover)',
+          subtle: 'var(--accent-gold-subtle)',
+          text: 'var(--accent-gold-text)',
+        },
+        cyan: {
+          DEFAULT: 'var(--accent-cyan)',
+          hover: 'var(--accent-cyan-hover)',
+          subtle: 'var(--accent-cyan-subtle)',
+          text: 'var(--accent-cyan-text)',
         },
         green: {
           DEFAULT: 'var(--accent-green)',
@@ -67,19 +73,6 @@ export default {
         'step-3': 'var(--step-3)',
         'step-4': 'var(--step-4)',
         'step-5': 'var(--step-5)',
-        'ui-2xs': 'var(--ui-text-2xs)',
-        'ui-xs': 'var(--ui-text-xs)',
-        'ui-sm': 'var(--ui-text-sm)',
-        'ui-md': 'var(--ui-text-md)',
-        'ui-lg': 'var(--ui-text-lg)',
-        'ui-xl': 'var(--ui-text-xl)',
-      },
-
-      height: {
-        'control-sm': 'var(--control-sm)',
-        'control-md': 'var(--control-md)',
-        'control-lg': 'var(--control-lg)',
-        'control-xl': 'var(--control-xl)',
       },
 
       letterSpacing: {
@@ -108,9 +101,6 @@ export default {
         '12': 'var(--space-12)',
         '16': 'var(--space-16)',
         '20': 'var(--space-20)',
-        'btn-gap': 'var(--btn-gap)',
-        'badge-y': 'var(--badge-py)',
-        'badge-x': 'var(--badge-px)',
       },
 
       borderRadius: {
@@ -125,9 +115,11 @@ export default {
         sm: 'var(--shadow-sm)',
         md: 'var(--shadow-md)',
         lg: 'var(--shadow-lg)',
-        blue: 'var(--shadow-blue)',
-        red: 'var(--shadow-red)',
-        yellow: 'var(--shadow-yellow)',
+        pink: 'var(--shadow-pink)',
+        danger: 'var(--shadow-danger)',
+        gold: 'var(--shadow-gold)',
+        cyan: 'var(--shadow-cyan)',
+        green: 'var(--shadow-green)',
       },
 
       transitionDuration: {
