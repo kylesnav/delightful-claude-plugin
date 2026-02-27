@@ -49,6 +49,12 @@ export default {
           subtle: 'var(--accent-green-subtle)',
           text: 'var(--accent-green-text)',
         },
+        purple: {
+          DEFAULT: 'var(--accent-purple)',
+          hover: 'var(--accent-purple-hover)',
+          subtle: 'var(--accent-purple-subtle)',
+          text: 'var(--accent-purple-text)',
+        },
 
         'status-info': 'var(--status-info)',
         'status-error': 'var(--status-error)',
@@ -137,6 +143,7 @@ export default {
         gold: 'var(--shadow-gold)',
         cyan: 'var(--shadow-cyan)',
         green: 'var(--shadow-green)',
+        purple: 'var(--shadow-purple)',
       },
 
       transitionDuration: {
@@ -144,12 +151,15 @@ export default {
         fast: 'var(--motion-fast)',
         base: 'var(--motion-base)',
         slow: 'var(--motion-slow)',
+        deliberate: 'var(--motion-deliberate)',
       },
 
       transitionTimingFunction: {
         out: 'var(--ease-out)',
         bounce: 'var(--ease-bounce)',
         smooth: 'var(--ease-smooth)',
+        slam: 'var(--ease-slam)',
+        elastic: 'var(--ease-elastic)',
       },
 
       zIndex: {
