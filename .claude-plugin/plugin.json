@@ -5,7 +5,8 @@
   "author": {
     "name": "Kyle S"
   },
-  "repository": "https://github.com/kylesnav/delightful-design-system",
+  "repository": "https://github.com/kylesnav/delightful-claude-plugin",
   "license": "MIT",
-  "homepage": "https://kylesnav.github.io/delightful-design-system/delightful-design-system.html"
+  "homepage": "https://kylesnav.github.io/delightful-design-system/delightful-design-system.html",
+  "keywords": ["design-system", "css", "neo-brutalist", "oklch", "ui", "tokens", "dark-mode", "tailwind"]
 }

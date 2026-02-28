@@ -4,70 +4,47 @@ A neo-brutalist design system with oklch colors, 3-tier tokens (7 color families
 
 ## Installation
 
-```bash
-claude plugin install /path/to/claude-plugin
+### From Marketplace (recommended)
+
+Add the marketplace, then install the plugin:
+
+```shell
+/plugin marketplace add kylesnav/delightful-claude-plugin
+/plugin install delightful-design-system@delightful-claude-plugin
 ```
 
-## Skills
+### From Local Clone
 
-### `/build-with-delightful`
+Clone the repo and load it directly:
 
-Build a new project or UI from the ground up using the Delightful design system.
-
-Scaffolds the full token system, builds components using strict design system patterns, then audits for compliance. Zero hardcoded colors, zero arbitrary spacing, full dark mode, all interaction states.
-
-### `/refactor-with-delightful`
-
-Refactor an existing project's UI to use the Delightful design system.
-
-Audits the existing codebase first, presents a migration plan, then systematically replaces hardcoded values with tokens. Re-audits until clean.
-
-## Agents
-
-### `delightful-auditor`
-
-Read-only compliance checker. Scans code for violations:
-- Hardcoded colors, spacing, font sizes
-- Missing interaction states (hover, active, focus-visible)
-- Blurred shadows (should be solid)
-- Missing dark mode support
-- Missing `prefers-reduced-motion` guards
-
-### `delightful-builder`
-
-Full-capability UI builder. Reads the design system reference and constructs components/pages strictly following all rules and patterns.
-
-## Exportable Themes
-
-### CSS Custom Properties
-
-```css
-@import './themes/css/delightful-tokens.css';
+```shell
+git clone https://github.com/kylesnav/delightful-claude-plugin.git
+claude --plugin-dir ./delightful-claude-plugin
 ```
 
-Standalone file with all 3 tiers of tokens. Drop into any project.
+## What You Get
 
-### Tailwind Preset
+### Skills
 
-```js
-// tailwind.config.js
-import delightfulPreset from './themes/tailwind/delightful-preset.js'
+| Skill | Description |
+|-------|-------------|
+| `/delightful-design-system:build-with-delightful` | Build a new project from the ground up using the design system |
+| `/delightful-design-system:refactor-with-delightful` | Refactor an existing project's UI to use design system tokens |
 
-export default {
-  presets: [delightfulPreset],
-  // ... your config
-}
-```
+### Agents
 
-Maps all tokens to Tailwind v3 utility classes. Requires the CSS tokens to be loaded too.
+| Agent | Description |
+|-------|-------------|
+| `delightful-auditor` | Read-only compliance checker — scans for hardcoded colors, missing states, blurred shadows |
+| `delightful-builder` | Full-capability UI builder — constructs components/pages following all design system rules |
 
-### Figma / Style Dictionary Tokens
+### Exportable Themes
 
-```
-themes/figma/tokens.json
-```
-
-Design Tokens Community Group format. Import into Figma with the Tokens Studio plugin or process with Style Dictionary.
+| Format | File | Usage |
+|--------|------|-------|
+| CSS Custom Properties | `themes/css/delightful-tokens.css` | Drop into any project |
+| Tailwind v3 Preset | `themes/tailwind/delightful-preset.js` | Use as a Tailwind preset |
+| Figma / Style Dictionary | `themes/figma/tokens.json` | Import via Tokens Studio or Style Dictionary |
 
 ## Design Principles
 
@@ -88,9 +65,10 @@ Tier 3 — Component       Typography, spacing, radius, motion, button, toggle
 ## File Structure
 
 ```
-claude-plugin/
+delightful-claude-plugin/
 ├── .claude-plugin/
-│   └── plugin.json              # Plugin manifest
+│   ├── plugin.json              # Plugin manifest
+│   └── marketplace.json         # Marketplace catalog
 ├── skills/
 │   ├── build-with-delightful/
 │   │   └── SKILL.md             # /build-with-delightful skill
@@ -108,5 +86,14 @@ claude-plugin/
 │   │   └── delightful-preset.js     # Tailwind v3 preset
 │   └── figma/
 │       └── tokens.json              # Figma/Style Dictionary tokens
+├── LICENSE
 └── README.md
 ```
+
+## Contributing
+
+This is the distribution copy of the plugin. Development happens in the [delightful-design-system](https://github.com/kylesnav/delightful-design-system) monorepo under `claude-plugin/`. To contribute, open issues or PRs there.
+
+## License
+
+MIT
