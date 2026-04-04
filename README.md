@@ -1,99 +1,119 @@
-# Delightful Design System — Claude Code Plugin
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="screenshots/Delightful-Dark.png" />
+    <source media="(prefers-color-scheme: light)" srcset="screenshots/Delightful-Light.png" />
+    <img src="screenshots/Delightful-Light.png" width="600" alt="Delightful Design System" />
+  </picture>
+</p>
 
-A neo-brutalist design system with oklch colors, 3-tier tokens (7 color families), 50+ components, @layer cascade architecture, a CSS motion system, and a JS animation system. Installable as a Claude Code plugin with two skills for building and refactoring UI.
+<h1 align="center">Delightful — Claude Code Plugin</h1>
 
-## Installation
+<p align="center">
+  Build and refactor UI with the <a href="https://github.com/kylesnav/delightful-design-system">Delightful Design System</a>. Includes skills, agents, and exportable tokens.
+</p>
 
-### From Marketplace (recommended)
+---
 
-Add the marketplace, then install the plugin:
+## Install
 
-```shell
-/plugin marketplace add kylesnav/delightful-claude-plugin
-/plugin install delightful-design-system@delightful-claude-plugin
+```bash
+claude plugin install kylesnav/delightful-claude-plugin
 ```
 
-### From Local Clone
+## Skills
 
-Clone the repo and load it directly:
+### `/build-with-delightful`
 
-```shell
-git clone https://github.com/kylesnav/delightful-claude-plugin.git
-claude --plugin-dir ./delightful-claude-plugin
+Build a new project or UI from the ground up. Scaffolds the full token system, builds components using strict patterns, then audits for compliance. Zero hardcoded colors, full dark mode, all interaction states.
+
+### `/refactor-with-delightful`
+
+Refactor existing UI to use the design system. Audits first, presents a migration plan, then systematically replaces hardcoded values with tokens. Re-audits until clean.
+
+### `/audit-with-delightful`
+
+Run a compliance audit on your project. Scans for hardcoded values, missing interaction states, accessibility gaps, dark mode breakage, and token drift.
+
+### `/present-with-delightful`
+
+Generate self-contained HTML presentations styled with the design system. Turn any topic into a slide deck with sidebar navigation, search, keyboard controls, theme toggle, and the full neo-brutalist aesthetic.
+
+## Agents
+
+### `delightful-auditor`
+
+Read-only compliance checker. Scans for hardcoded colors, spacing, font sizes, resolved semantic references, missing shadow layers, interaction states, and reduced-motion guards.
+
+### `delightful-builder`
+
+UI builder. Reads reference docs and constructs components strictly following all design system rules and patterns.
+
+### `delightful-composer`
+
+Page-level composition agent. Assembles components into complete layouts with responsive behavior, dark mode, and visual hierarchy.
+
+## Reference Docs
+
+| Doc | Content |
+|-----|---------|
+| `tokens.md` | All 3 tiers of token values |
+| `components.md` | 20+ component patterns with CSS/HTML |
+| `interactions.md` | POUNCE/SINK press patterns, motion, animations |
+| `composition.md` | Page layouts, responsive, utilities, checklist |
+| `philosophy.md` | Design rationale and principles |
+| `accessibility.md` | WCAG contract, contrast, focus model |
+| `porting-guide.md` | How to create new platform themes |
+| `governance.md` | How to safely extend the token system |
+
+## Exportable Tokens
+
+### CSS Custom Properties
+
+```css
+@import './themes/css/delightful-tokens.css';
 ```
 
-## What You Get
+Standalone file with all 3 tiers of tokens. Drop into any project.
 
-### Skills
+### Tailwind Preset
 
-| Skill | Description |
-|-------|-------------|
-| `/delightful-design-system:build-with-delightful` | Build a new project from the ground up using the design system |
-| `/delightful-design-system:refactor-with-delightful` | Refactor an existing project's UI to use design system tokens |
+```js
+// tailwind.config.js
+import delightfulPreset from './themes/tailwind/delightful-preset.js'
 
-### Agents
+export default {
+  presets: [delightfulPreset],
+}
+```
 
-| Agent | Description |
-|-------|-------------|
-| `delightful-auditor` | Read-only compliance checker — scans for hardcoded colors, missing states, blurred shadows |
-| `delightful-builder` | Full-capability UI builder — constructs components/pages following all design system rules |
+Maps all tokens to Tailwind v3 utility classes. Requires the CSS tokens to be loaded too.
 
-### Exportable Themes
+### Figma / Style Dictionary
 
-| Format | File | Usage |
-|--------|------|-------|
-| CSS Custom Properties | `themes/css/delightful-tokens.css` | Drop into any project |
-| Tailwind v3 Preset | `themes/tailwind/delightful-preset.js` | Use as a Tailwind preset |
-| Figma / Style Dictionary | `themes/figma/tokens.json` | Import via Tokens Studio or Style Dictionary |
+```
+themes/figma/tokens.json
+```
+
+Design Tokens Community Group format. Import into Figma with Tokens Studio or process with Style Dictionary.
 
 ## Design Principles
 
-- **Warm clarity** — Cream backgrounds, near-black text, generous whitespace
-- **Surgical color** — Pink for actions, red for danger, gold for highlights, cyan for coolness, green for success, purple for creative
-- **Joyful restraint** — Playful but controlled. Spring motion under 240ms.
-- **Neo-brutalist** — 2px borders, solid shadows (zero blur), bold typography
-- **Systematic** — Every value comes from a token. No magic numbers.
+| Principle | Description |
+|-----------|-------------|
+| **Warm clarity** | Cream backgrounds, near-black text, generous whitespace |
+| **Surgical color** | Pink for actions, red for danger, gold for highlights, cyan for coolness, green for success, purple for creative |
+| **Joyful restraint** | Playful but controlled — spring motion under 240ms |
+| **Neo-brutalist** | 2px borders, solid shadows (zero blur), bold typography |
+| **Systematic** | Every value comes from a token, no magic numbers |
 
 ## Token Architecture
 
 ```
-Tier 1 — Primitives     Raw oklch scales (neutral, pink, red, gold, cyan, green, purple)
+Tier 1 — Primitives     Raw OKLCH scales (neutral, pink, red, gold, cyan, green, purple)
 Tier 2 — Semantic        Light/dark mode tokens (bg, text, accent, border, shadow)
 Tier 3 — Component       Typography, spacing, radius, motion, button, toggle
 ```
 
-## File Structure
-
-```
-delightful-claude-plugin/
-├── .claude-plugin/
-│   ├── plugin.json              # Plugin manifest
-│   └── marketplace.json         # Marketplace catalog
-├── skills/
-│   ├── build-with-delightful/
-│   │   └── SKILL.md             # /build-with-delightful skill
-│   └── refactor-with-delightful/
-│       └── SKILL.md             # /refactor-with-delightful skill
-├── agents/
-│   ├── delightful-auditor.md    # Compliance checker agent
-│   └── delightful-builder.md    # UI builder agent
-├── reference/
-│   └── design-system.md         # Full token + component reference
-├── themes/
-│   ├── css/
-│   │   └── delightful-tokens.css    # Standalone CSS tokens
-│   ├── tailwind/
-│   │   └── delightful-preset.js     # Tailwind v3 preset
-│   └── figma/
-│       └── tokens.json              # Figma/Style Dictionary tokens
-├── LICENSE
-└── README.md
-```
-
-## Contributing
-
-This is the distribution copy of the plugin. Development happens in the [delightful-design-system](https://github.com/kylesnav/delightful-design-system) monorepo under `claude-plugin/`. To contribute, open issues or PRs there.
-
 ## License
 
-MIT
+[MIT](LICENSE)

@@ -10,8 +10,8 @@
     {
       "name": "delightful-design-system",
       "source": ".",
-      "description": "Neo-brutalist design system with oklch colors, 3-tier tokens, 20+ components, and a complete motion system. Includes skills for building new UI and refactoring existing projects.",
-      "version": "0.5.0",
+      "description": "Neo-brutalist design system with oklch colors, 3-tier tokens, 20+ components, and a complete motion system. Includes skills for building, refactoring, auditing UI, and generating presentations.",
+      "version": "0.7.0",
       "category": "design",
       "tags": ["design-system", "css", "neo-brutalist", "oklch", "ui", "dark-mode"]
     }
