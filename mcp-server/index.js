@@ -351,7 +351,7 @@ function findClosestToken(colorStr) {
 // ---------------------------------------------------------------------------
 
 const server = new McpServer(
-  { name: "delightful-design-system", version: "0.8.0" },
+  { name: "delightful-design-system", version: "0.7.0" },
   {
     instructions:
       "Delightful Design System MCP server — neo-brutalist design system with OKLCH colors, 3-tier tokens, 20+ components, and a complete motion system. Use lookup_token for token values, lookup_component for component patterns, map_color to convert colors to tokens, audit_css to check CSS compliance, and get_token_css for the full stylesheet. Browse delightful:// resources for full reference docs.",

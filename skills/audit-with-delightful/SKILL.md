@@ -1,7 +1,7 @@
 ---
 name: audit-with-delightful
 description: This skill should be used when the user wants to check any UI for Delightful Design System compliance. Common triggers include "audit with delightful", "check design system compliance", "scan for violations", "does this match delightful", "check my tokens", "audit this Figma", "review this design", or any request to find hardcoded values, missing interaction states, or accessibility gaps. Works on code files, Figma designs, live pages, or screenshots.
-allowed-tools: "Bash WebFetch"
+allowed-tools: ["Bash", "WebFetch"]
 metadata:
   author: Delightful Design System
   version: 0.7.0

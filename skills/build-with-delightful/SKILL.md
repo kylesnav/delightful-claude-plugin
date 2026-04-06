@@ -1,7 +1,7 @@
 ---
 name: build-with-delightful
 description: This skill should be used when the user wants to build new UI using the Delightful design system — in any format. Common triggers include "build with delightful", "create a new page", "scaffold a UI", "make a component", "design in Figma with delightful", "build a form", or any request to construct UI following neo-brutalist patterns with oklch tokens. Works with HTML/CSS, Figma, React, or any available output tool.
-allowed-tools: "Bash WebFetch"
+allowed-tools: ["Bash", "WebFetch"]
 metadata:
   author: Delightful Design System
   version: 0.7.0

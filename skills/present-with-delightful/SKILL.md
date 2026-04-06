@@ -9,7 +9,7 @@ description: >-
   request that mentions both "presentation" and "delightful" in any form. Also triggers
   on any request to generate a navigable slide-based presentation with sidebar
   navigation, search, keyboard controls, theme toggle, and neo-brutalist styling.
-allowed-tools: "Bash WebFetch"
+allowed-tools: ["Bash", "WebFetch"]
 metadata:
   author: Delightful Design System
   version: 0.7.0

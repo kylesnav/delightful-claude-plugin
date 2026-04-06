@@ -1,7 +1,7 @@
 ---
 name: refactor-with-delightful
 description: This skill should be used when the user wants to refactor or migrate existing UI to the Delightful design system — in any format. Common triggers include "refactor with delightful", "migrate to delightful", "apply design system", "replace hardcoded styles", "convert to delightful tokens", "update my Figma to use delightful", or any request to replace ad-hoc styling with systematic oklch tokens, dark mode, and neo-brutalist patterns. Works with code, Figma designs, or any available tool.
-allowed-tools: "Bash WebFetch"
+allowed-tools: ["Bash", "WebFetch"]
 metadata:
   author: Delightful Design System
   version: 0.7.0
