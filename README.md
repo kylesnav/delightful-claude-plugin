@@ -133,13 +133,15 @@ Then install dependencies: `cd /path/to/delightful-claude-plugin/mcp-server && n
 
 ## Part of Delightful
 
-This plugin is the AI interface to the [Delightful Design System](https://github.com/kylesnav/delightful-design-system). The canonical reference lives at [kylesnav.github.io/delightful-design-system](https://kylesnav.github.io/delightful-design-system/delightful-design-system.html).
+This plugin is the AI interface to the [Delightful Design System](https://github.com/kylesnav/delightful-design-system). The canonical public reference lives at [delightful.build](https://delightful.build/).
 
 Related packages:
-- [delightful-design-system](https://github.com/kylesnav/delightful-design-system) — Canonical reference, HTML spec, and documentation
-- [delightful-css](https://github.com/kylesnav/delightful-css) — Standalone CSS tokens package
-- [delightful-tailwind](https://github.com/kylesnav/delightful-tailwind) — Tailwind CSS preset
-- [delightful-figma](https://github.com/kylesnav/delightful-figma) — Figma tokens (DTCG format)
+- [delightful-design-system](https://github.com/kylesnav/delightful-design-system) — Public site, HTML spec, and documentation
+- [delightful-vscode](https://github.com/kylesnav/delightful-vscode) — VS Code color theme
+- [obsidian-delightful](https://github.com/kylesnav/obsidian-delightful) — Obsidian community theme
+- [delightful-ghostty](https://github.com/kylesnav/delightful-ghostty) — Ghostty terminal theme
+- [delightful-iterm2](https://github.com/kylesnav/delightful-iterm2) — iTerm2 color profiles
+- [delightful-starship](https://github.com/kylesnav/delightful-starship) — Starship prompt theme
 
 ## License
 

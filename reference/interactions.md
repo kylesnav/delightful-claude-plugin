@@ -82,7 +82,7 @@ All animations MUST be wrapped in `@media (prefers-reduced-motion: no-preference
 /* Toggle .accordion-open class to animate height smoothly */
 ```
 
-See the [Motion System](https://kylesnav.github.io/delightful-design-system/delightful-motion.html) for 59 named animations across 10 categories with live demos.
+See the [Motion System](https://delightful.build/delightful-motion.html) for 59 named animations across 10 categories with live demos.
 
 ---
 
