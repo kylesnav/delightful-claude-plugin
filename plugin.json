@@ -7,6 +7,6 @@
   },
   "repository": "https://github.com/kylesnav/delightful-claude-plugin",
   "license": "MIT",
-  "homepage": "https://kylesnav.github.io/delightful-design-system/delightful-design-system.html",
+  "homepage": "https://delightful.build/",
   "keywords": ["design-system", "css", "neo-brutalist", "oklch", "dark-mode", "tokens", "tailwind", "figma"]
 }
